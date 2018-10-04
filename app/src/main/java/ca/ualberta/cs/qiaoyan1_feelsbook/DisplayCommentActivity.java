@@ -89,8 +89,8 @@ public class DisplayCommentActivity extends AppCompatActivity {
             BufferedReader reader = new BufferedReader(isr);
 
             Gson gson = new Gson();
-            Type typeListTweets= new TypeToken<ArrayList<ImportantFeeling>>(){}.getType();
-            History = gson.fromJson(reader, typeListTweets);
+            Type typeListHistory= new TypeToken<ArrayList<ImportantFeeling>>(){}.getType();
+            History = gson.fromJson(reader, typeListHistory);
         }
 
         catch (FileNotFoundException e) {
