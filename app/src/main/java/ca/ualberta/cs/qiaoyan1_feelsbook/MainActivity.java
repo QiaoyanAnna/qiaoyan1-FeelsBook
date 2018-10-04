@@ -8,11 +8,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+
+    public static final String EXTRA_MESSAGE = "ca.ualberta.cs.qiaoyan1_feelsbook.MESSAGE";
+    private TextView num_of_love;
+    public int love_count;
+    private String loveCountString;
 //
 //    private static final String FILENAME = "file.sav";
 //    private EditText editComment;
@@ -25,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initialize();
+        loveCountString = getText();
+        updateTextView(loveCountString);
+
+
     }
 
 //    editComment = (EditText) findViewById(R.id.editComment);
@@ -32,6 +43,21 @@ public class MainActivity extends AppCompatActivity {
 //    Button loveButton = (Button) findViewById(R.id.loveButton);
 //    historyText = (ListView) findViewById(R.id.historyText);
 
+    public void initialize(){
+        num_of_love = (TextView) findViewById(R.id.loveCount);
+        num_of_love.setText("LOVE COUNT: 0");
+    }
+    public void updateTextView(String loveCountString) {
+        // String loveCountString = Integer.toString(loveCount);
+        num_of_love = (TextView) findViewById(R.id.loveCount);
+        num_of_love.setText(loveCountString);
+    }
+
+    public String getText(){
+        num_of_love = (TextView) findViewById(R.id.loveCount);
+        loveCountString = num_of_love.getText().toString();
+        return loveCountString;
+    }
 
     /** Called when the user taps the Send button */
     public void love(View view) {
@@ -39,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
         String message = "LOVE";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        love_count = love_count + 1;
+        loveCountString = "LOVE COUNT: " + Integer.toString(love_count);
+        updateTextView(loveCountString);
     }
 
     public void joy(View view) {

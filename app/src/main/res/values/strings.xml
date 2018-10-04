@@ -9,4 +9,5 @@
     <string name="botton_sadness">Sadness</string>
     <string name="botton_fear">Fear</string>
     <string name="text_history">History</string>
+    <string name="num_of_love">10</string>
 </resources>

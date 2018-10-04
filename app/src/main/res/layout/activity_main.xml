@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/loveButton"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -45,7 +45,7 @@
     <Button
         android:id="@+id/surpriseButton"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/fearButton"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="32dp"
@@ -69,12 +69,23 @@
     <Button
         android:id="@+id/joyButton"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:onClick="joy"
         android:text="@string/botton_joy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loveCount" />
+
+    <TextView
+        android:id="@+id/loveCount"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/num_of_love"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loveButton" />
 

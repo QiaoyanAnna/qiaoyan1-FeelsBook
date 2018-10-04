@@ -30,9 +30,7 @@ public class DisplayCommentActivity extends AppCompatActivity {
     private EditText editComment;
     private ListView historyList;
     private ArrayList<feelingHistory> History = new ArrayList<feelingHistory>();
-
     private ArrayAdapter<feelingHistory> adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +45,16 @@ public class DisplayCommentActivity extends AppCompatActivity {
 //    historyList = (ListView) findViewById(R.id.historyList);
 //    historyList.setAdapter(adapter);
 
+
+//        ImportantFeeling newHistory = new ImportantFeeling(feel);
+//        History.add(newHistory);
+//        adapter.notifyDataSetChanged();
+//        saveInFile();
+
         editComment = (EditText) findViewById(R.id.editComment);
         Button commentButton = (Button) findViewById(R.id.commentButton);
         historyList = (ListView) findViewById(R.id.historyList);
+
 
 
         commentButton.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +79,7 @@ public class DisplayCommentActivity extends AppCompatActivity {
                 R.layout.list_item, History);
         historyList.setAdapter(adapter);
     }
+
 
     private void loadFromFile() {
 
