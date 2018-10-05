@@ -1,0 +1,158 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/66aa1a0a8b9495f34de3500ddd0a07b0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ae212504f608fd1a44edb3db70dc694d/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/80ec1fb8d605ad8a929126c90868f471/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/14d92a9a0153d6a3e906a61a3c778a92/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/026171ec558ed090692238f8ed9f2f55/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7f8df5524f39befceb4dcdffad122e56/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/501e164ccf66d0cb26eda706b2230910/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee50c6b54e6a81b3d17a5efd2ab900d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/facbec4aadc6ecb0affd20577bf819ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/92bb37b0a0d60b37ffe64ece4b40a2f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/79181833d4fb0247ee31a3cf5ab9ad21/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5cdb92b6f7e5cc9a818f7dc4889cbafa/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cf06ed69d59804d505331997665a0089/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/2c4596c77aefa6a2e1e323ba8a7208f5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d4df9f321fe1ec53c5bd3ecbbc1c8592/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6866e723f342ef8f05b161f35c970278/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/0cec7c0e013642c2fbfdda93109ec92d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6af302f57f58086b41d3cda527d085bd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/82cda6a1e65d316ddf88aa14f6180cdd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/0eccfbf261f8f98a007392ca7b74795c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abf386941cd5810f6f30efe1bc9b709a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/fdde72f2ac0cff8cd34c7b69ffdb8a24/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/97fc1b7726543292ade2341673fd2733/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/47b795d918ab33dd617939f7348b5555/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4acfedeada33490afb456e5a1949cde9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8db3e9f3bed8f6c97c2e7dcba1e9c84b/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+	package
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:3:5-48
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ae212504f608fd1a44edb3db70dc694d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ae212504f608fd1a44edb3db70dc694d/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6866e723f342ef8f05b161f35c970278/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6866e723f342ef8f05b161f35c970278/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:11:9-40
+activity#ca.ualberta.cs.qiaoyan1_feelsbook.MainActivity
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:16:27-74
+activity#ca.ualberta.cs.qiaoyan1_feelsbook.DisplayCommentActivity
+ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:19:9-69
+	android:name
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml:19:19-57
+uses-sdk
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/66aa1a0a8b9495f34de3500ddd0a07b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/66aa1a0a8b9495f34de3500ddd0a07b0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ae212504f608fd1a44edb3db70dc694d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/ae212504f608fd1a44edb3db70dc694d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/80ec1fb8d605ad8a929126c90868f471/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/80ec1fb8d605ad8a929126c90868f471/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/14d92a9a0153d6a3e906a61a3c778a92/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/14d92a9a0153d6a3e906a61a3c778a92/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/026171ec558ed090692238f8ed9f2f55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/026171ec558ed090692238f8ed9f2f55/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7f8df5524f39befceb4dcdffad122e56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/7f8df5524f39befceb4dcdffad122e56/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/501e164ccf66d0cb26eda706b2230910/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/501e164ccf66d0cb26eda706b2230910/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee50c6b54e6a81b3d17a5efd2ab900d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/bee50c6b54e6a81b3d17a5efd2ab900d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/facbec4aadc6ecb0affd20577bf819ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/facbec4aadc6ecb0affd20577bf819ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/92bb37b0a0d60b37ffe64ece4b40a2f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/92bb37b0a0d60b37ffe64ece4b40a2f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/79181833d4fb0247ee31a3cf5ab9ad21/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/79181833d4fb0247ee31a3cf5ab9ad21/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5cdb92b6f7e5cc9a818f7dc4889cbafa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/5cdb92b6f7e5cc9a818f7dc4889cbafa/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cf06ed69d59804d505331997665a0089/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/cf06ed69d59804d505331997665a0089/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/2c4596c77aefa6a2e1e323ba8a7208f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/2c4596c77aefa6a2e1e323ba8a7208f5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d4df9f321fe1ec53c5bd3ecbbc1c8592/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/d4df9f321fe1ec53c5bd3ecbbc1c8592/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0779965c5a998f80410143c0c14c0372/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6866e723f342ef8f05b161f35c970278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/6866e723f342ef8f05b161f35c970278/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/0cec7c0e013642c2fbfdda93109ec92d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/0cec7c0e013642c2fbfdda93109ec92d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6af302f57f58086b41d3cda527d085bd/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6af302f57f58086b41d3cda527d085bd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/82cda6a1e65d316ddf88aa14f6180cdd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/82cda6a1e65d316ddf88aa14f6180cdd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/0eccfbf261f8f98a007392ca7b74795c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/0eccfbf261f8f98a007392ca7b74795c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abf386941cd5810f6f30efe1bc9b709a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/abf386941cd5810f6f30efe1bc9b709a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/fdde72f2ac0cff8cd34c7b69ffdb8a24/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/fdde72f2ac0cff8cd34c7b69ffdb8a24/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/97fc1b7726543292ade2341673fd2733/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/97fc1b7726543292ade2341673fd2733/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/47b795d918ab33dd617939f7348b5555/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/47b795d918ab33dd617939f7348b5555/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4acfedeada33490afb456e5a1949cde9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/4acfedeada33490afb456e5a1949cde9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8db3e9f3bed8f6c97c2e7dcba1e9c84b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/annabelle/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8db3e9f3bed8f6c97c2e7dcba1e9c84b/AndroidManifest.xml:20:5-44
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/annabelle/Desktop/CMPUT301/Assignment/qiaoyan1FeelsBook/app/src/main/AndroidManifest.xml
