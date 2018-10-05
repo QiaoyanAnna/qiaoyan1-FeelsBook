@@ -4,33 +4,29 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
+import android.widget.Toast;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class DisplayCommentActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "file.sav";
+
     private EditText editComment;
+    private EditText editHistory;
     private ListView historyList;
-    private ArrayList<feelingHistory> History = new ArrayList<feelingHistory>();
+
     private ArrayAdapter<feelingHistory> adapter;
+
+    private feelingHistory currentFeeling = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +35,14 @@ public class DisplayCommentActivity extends AppCompatActivity {
 
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        final String feel = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        editComment = (EditText) findViewById(R.id.editComment);
+        final Button commentButton = (Button) findViewById(R.id.commentButton);
+        if(intent.getBooleanExtra("isHistory", false))
+        {
+            editComment.setVisibility(View.GONE);
+            commentButton.setVisibility(View.GONE);
+        }
+        final String feel = intent.getStringExtra(Util.EXTRA_MESSAGE);
 
         // Capture the layout's TextView and set the string as its text
 //    historyList = (ListView) findViewById(R.id.historyList);
@@ -51,75 +54,110 @@ public class DisplayCommentActivity extends AppCompatActivity {
 //        adapter.notifyDataSetChanged();
 //        saveInFile();
 
-        editComment = (EditText) findViewById(R.id.editComment);
-        Button commentButton = (Button) findViewById(R.id.commentButton);
-        historyList = (ListView) findViewById(R.id.historyList);
 
+        historyList = (ListView) findViewById(R.id.historyList);
+        editHistory = (EditText) findViewById(R.id.editHistory);
 
 
         commentButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                editComment.setVisibility(View.GONE);
+                commentButton.setVisibility(View.GONE);
                 String text = editComment.getText().toString();
-                String message = feel + " | " + text ;
-                ImportantFeeling newHistory = new ImportantFeeling(message);
-                History.add(newHistory);
+
+                Util.currentImportantFeeling.setComment(text);
+
                 adapter.notifyDataSetChanged();
-                saveInFile();
+                Util.saveInFile(getApplicationContext());
 
             }
         });
+
+        historyList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                currentFeeling = Util.history.get(position);
+                editHistory.setText(currentFeeling.toString());
+            }
+        });
+
+        historyList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                feelingHistory currentFeel = Util.history.get(position);
+                Util.history.remove(currentFeel);
+                Util.notifyListener();
+                adapter.notifyDataSetChanged();
+                return false;
+            }
+        });
+
     }
     @Override
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
-        loadFromFile();
+
         adapter = new ArrayAdapter<feelingHistory>(this,
-                R.layout.list_item, History);
+                R.layout.list_item, Util.history);
         historyList.setAdapter(adapter);
     }
 
+//    private void displayOnline(String historyItem){
+//        editHistory = (EditText) findViewById(R.id.editHistory);
+//        editHistory.setText(historyItem);
+//
+//
+//    }
 
-    private void loadFromFile() {
+    public void edit_and_store(View view){
+//        PreviousHistoryItemList = historyItem.split("\\|'");
+//        NewHistoryItemList = editHistory.getText().toString().split("\\|");
+//       if (NewHistoryItemList[0] != PreviousHistoryItemList[0]){
+//            changeDate(NewHistoryItemList);
+//        }
+//        else if (NewHistoryItemList[1] != PreviousHistoryItemList[1]){
+//            changeFeeling();
+//        }
+//        else if (NewHistoryItemList[2] != PreviousHistoryItemList[2]){
+//            changeComment();
+//        }
 
-        try {
-            FileInputStream fis = openFileInput(FILENAME);
-            InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader reader = new BufferedReader(isr);
-
-            Gson gson = new Gson();
-            Type typeListHistory= new TypeToken<ArrayList<ImportantFeeling>>(){}.getType();
-            History = gson.fromJson(reader, typeListHistory);
+        //String new_history = newHistory.toString()
+        //History.remove(historyListPositon);
+        if(currentFeeling==null) {
+            Toast.makeText(this, "You need click one emotion first.", Toast.LENGTH_SHORT).show();
         }
-
-        catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        else {
+            String data = editHistory.getText().toString();
+            String splits[] = data.split(" \\| ");
+            String date = splits[0];
+            String feeling = splits[1];
+            String comment = splits[2];
+            Date newDate = null;
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            try {
+                newDate = sdf.parse(date);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            if(newDate!=null)
+                currentFeeling.setDate(newDate);
+            currentFeeling.setMessage(feeling);
+            currentFeeling.setComment(comment);
+            adapter.notifyDataSetChanged();
+            Util.saveInFile(getApplicationContext());
+            Util.notifyListener();
         }
 
     }
 
-    private void saveInFile() {
-        try {
-            FileOutputStream fos =openFileOutput(FILENAME, 0);
-            OutputStreamWriter osw = new OutputStreamWriter(fos);
-            BufferedWriter writer = new BufferedWriter(osw);
-            Gson gson = new Gson();
-            gson.toJson(History,osw);
-            writer.flush();
-            fos.close();
+//    private void changeDate(String[] NewHistoryItemList){
+//
+//    }
 
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
+
 
 }

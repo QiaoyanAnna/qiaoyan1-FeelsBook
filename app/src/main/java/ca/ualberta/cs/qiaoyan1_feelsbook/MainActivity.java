@@ -4,41 +4,35 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
+
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "ca.ualberta.cs.qiaoyan1_feelsbook.MESSAGE";
-
     private TextView num_of_love;
-    public int love_count;
-    private String loveCountString;
+
 
     private TextView num_of_joy;
-    public int joy_count;
-    private String joyCountString;
+
 
     private TextView num_of_surprise;
-    public int surprise_count;
-    private String surpriseCountString;
+
 
     private TextView num_of_anger;
-    public int anger_count;
-    private String angerCountString;
+
 
     private TextView num_of_sadness;
-    public int sadness_count;
-    private String sadnessCountString;
 
     private TextView num_of_fear;
-    public int fear_count;
-    private String fearCountString;
+
+
+    HashMap<String, Integer> counts = new HashMap<>();
+    static String feeling[] = {"LOVE", "JOY", "SURPRISE", "ANGER", "SADNESS", "FEAR"};
 //
 //    private static final String FILENAME = "file.sav";
 //    private EditText editComment;
@@ -53,23 +47,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initialize();
-        loveCountString = getLove();
-        updateLove(loveCountString);
+        Util.loadFromFile(getApplicationContext());
+        getCount(Util.history, counts);
 
-        joyCountString = getJoy();
-        updateJoy(joyCountString);
+        num_of_love = findViewById(R.id.loveCount);
+        num_of_sadness = findViewById(R.id.sadnessCount);
+        num_of_fear = findViewById(R.id.fearCount);
+        num_of_surprise = findViewById(R.id.surpriseCount);
+        num_of_joy = findViewById(R.id.joyCount);
+        num_of_anger = findViewById(R.id.angerCount);
 
-        surpriseCountString = getSurprise();
-        updateSurprise(surpriseCountString);
+        updateCount();
 
-        angerCountString = getAnger();
-        updateAnger(angerCountString);
-
-        sadnessCountString = getSadness();
-        updateSadness(sadnessCountString);
-
-        fearCountString = getFear();
-        updateFear(fearCountString);
+        Util.addListener(new Listener() {
+            @Override
+            public void update() {
+                getCount(Util.history, counts);
+                updateCount();
+                Util.saveInFile(MainActivity.this);
+                sortHistory();
+            }
+        });
     }
 
 //    editComment = (EditText) findViewById(R.id.editComment);
@@ -77,149 +75,82 @@ public class MainActivity extends AppCompatActivity {
 //    Button loveButton = (Button) findViewById(R.id.loveButton);
 //    historyText = (ListView) findViewById(R.id.historyText);
 
+    public void sortHistory()
+    {
+        Collections.sort(Util.history, new Comparator<feelingHistory>() {
+            @Override
+            public int compare(feelingHistory o1, feelingHistory o2) {
+                if(o1.getDate().after(o2.getDate()))
+                    return -1;
+                return 1;
+            }
+        });
+    }
+
+    public void updateCount()
+    {
+        num_of_love.setText("LOVE: " + counts.get("LOVE"));
+        num_of_joy.setText("JOY: " + counts.get("JOY"));
+        num_of_surprise.setText("SURPRISE: " + counts.get("SURPRISE"));
+        num_of_anger.setText("ANGER: " + counts.get("ANGER"));
+        num_of_sadness.setText("SADNESS: " + counts.get("SADNESS"));
+        num_of_fear.setText("FEAR: " + counts.get("FEAR"));
+    }
+
     public void initialize(){
-        num_of_love = (TextView) findViewById(R.id.loveCount);
-        num_of_love.setText("LOVE COUNT: 0");
-        num_of_joy = (TextView) findViewById(R.id.joyCount);
-        num_of_joy.setText("JOY COUNT: 0");
-        num_of_surprise = (TextView) findViewById(R.id.surpriseCount);
-        num_of_surprise.setText("SURPRISE COUNT: 0");
-        num_of_anger = (TextView) findViewById(R.id.angerCount);
-        num_of_anger.setText("ANGER COUNT: 0");
-        num_of_sadness = (TextView) findViewById(R.id.sadnessCount);
-        num_of_sadness.setText("SADNESS COUNT: 0");
-        num_of_fear = (TextView) findViewById(R.id.fearCount);
-        num_of_fear.setText("FEAR COUNT: 0");
-    }
-    public void updateLove(String loveCountString) {
-        // String loveCountString = Integer.toString(loveCount);
-        num_of_love = (TextView) findViewById(R.id.loveCount);
-        num_of_love.setText(loveCountString);
+
+        for(String str:feeling)
+        {
+            counts.put(str, 0);
+        }
     }
 
-    public String getLove(){
-        num_of_love = (TextView) findViewById(R.id.loveCount);
-        loveCountString = num_of_love.getText().toString();
-        return loveCountString;
-    }
+    public static void getCount(ArrayList<feelingHistory> history, HashMap<String, Integer> counts)
+    {
+        for(String str:feeling)
+        {
+            counts.put(str, 0);
+        }
 
-    public void updateJoy(String joyCountString) {
-        num_of_joy = (TextView) findViewById(R.id.joyCount);
-        num_of_joy.setText(joyCountString);
-    }
-
-    public String getJoy(){
-        num_of_joy = (TextView) findViewById(R.id.joyCount);
-        joyCountString = num_of_joy.getText().toString();
-        return joyCountString;
-    }
-
-    public void updateSurprise(String surpriseCountString) {
-        num_of_surprise = (TextView) findViewById(R.id.surpriseCount);
-        num_of_surprise.setText(surpriseCountString);
-    }
-
-    public String getSurprise(){
-        num_of_surprise = (TextView) findViewById(R.id.surpriseCount);
-        surpriseCountString = num_of_surprise.getText().toString();
-        return surpriseCountString;
-    }
-
-    public void updateAnger(String angerCountString) {
-        num_of_anger = (TextView) findViewById(R.id.angerCount);
-        num_of_anger.setText(angerCountString);
-    }
-
-    public String getAnger(){
-        num_of_anger = (TextView) findViewById(R.id.angerCount);
-        angerCountString = num_of_anger.getText().toString();
-        return angerCountString;
-    }
-
-    public void updateSadness(String sadnessCountString) {
-        num_of_sadness = (TextView) findViewById(R.id.sadnessCount);
-        num_of_sadness.setText(sadnessCountString);
-    }
-
-    public String getSadness(){
-        num_of_sadness = (TextView) findViewById(R.id.sadnessCount);
-        sadnessCountString = num_of_sadness.getText().toString();
-        return sadnessCountString;
-    }
-
-    public void updateFear(String fearCountString) {
-        num_of_fear = (TextView) findViewById(R.id.fearCount);
-        num_of_fear.setText(fearCountString);
-    }
-
-    public String getFear(){
-        num_of_fear = (TextView) findViewById(R.id.fearCount);
-        fearCountString = num_of_fear.getText().toString();
-        return fearCountString;
+        for(feelingHistory feel:history)
+        {
+            String feeling = feel.getMessage().split(" \\| ")[0];
+            int count = counts.get(feeling) + 1;
+            counts.put(feeling, count);
+        }
     }
 
     /** Called when the user taps the Send button */
     public void love(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "LOVE";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        love_count = love_count + 1;
-        loveCountString = "LOVE COUNT: " + Integer.toString(love_count);
-        updateLove(loveCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "LOVE");
     }
 
     public void joy(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "JOY";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        joy_count = joy_count + 1;
-        joyCountString = "JOY COUNT: " + Integer.toString(joy_count);
-        updateJoy(joyCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "JOY");
     }
 
     public void surprise(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "SURPRISE";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        surprise_count = surprise_count + 1;
-        surpriseCountString = "SURPRISE COUNT: " + Integer.toString(surprise_count);
-        updateSurprise(surpriseCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "SURPRISE");
     }
 
     public void anger(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "ANGER";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        anger_count = anger_count + 1;
-        angerCountString = "ANGER COUNT: " + Integer.toString(anger_count);
-        updateAnger(angerCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "ANGER");
     }
 
     public void sadness(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "SADNESS";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        sadness_count = sadness_count + 1;
-        sadnessCountString = "SADNESS COUNT: " + Integer.toString(sadness_count);
-        updateSadness(sadnessCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "SADNESS");
     }
 
     public void fear(View view) {
-        Intent intent = new Intent(this, DisplayCommentActivity.class);
-        String message = "FEAR";
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        fear_count = fear_count + 1;
-        fearCountString = "FEAR COUNT: " + Integer.toString(fear_count);
-        updateFear(fearCountString);
+        Util.addEmotion(Util.EXTRA_MESSAGE, MainActivity.this, "FEAR");
     }
 
 
 
-
+    public void viewHistory(View view)
+    {
+        Intent intent = new Intent(this, DisplayCommentActivity.class);
+        intent.putExtra("isHistory", true);
+        startActivity(intent);
+    }
 }

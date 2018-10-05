@@ -3,10 +3,12 @@
     <string name="button_comment">Comment</string>
     <string name="edit_comment">Enter a comment</string>
     <string name="button_love">Love</string>
-    <string name="botton_joy">Joy</string>
-    <string name="botton_surprise">Surprise</string>
-    <string name="botton_anger">Anger</string>
-    <string name="botton_sadness">Sadness</string>
-    <string name="botton_fear">Fear</string>
+    <string name="button_joy">Joy</string>
+    <string name="button_surprise">Surprise</string>
+    <string name="button_anger">Anger</string>
+    <string name="button_sadness">Sadness</string>
+    <string name="button_fear">Fear</string>
     <string name="text_history">History</string>
+    <string name="button_edit">Edit</string>
+    <string name="edit_here">Click a history to edit</string>
 </resources>

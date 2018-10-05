@@ -1,13 +1,17 @@
 package ca.ualberta.cs.qiaoyan1_feelsbook;
 
+import java.text.SimpleDateFormat;
+
 public class ImportantFeeling extends feelingHistory{
     public ImportantFeeling(String message)
     {
         super(message);
     }
 
-    public boolean isImportant()
-    {
-        return true;
+    public String toString() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        String dateString = sdf.format(this.date);
+
+        return dateString + " | " + this.message + " | " + this.comment;
     }
 }
