@@ -20,36 +20,33 @@ import java.util.ArrayList;
 
 public class Util
 {
+    /** initialize*/
     private static final String FILENAME = "file.sav";
-
     public static String EXTRA_MESSAGE = "ca.ualberta.cs.qiaoyan1_feelsbook.MESSAGE";
-
     public static ArrayList<feelingHistory> history = new ArrayList<>();
-
     private static ArrayList<Listener> listeners = new ArrayList<>();
-
     public static feelingHistory currentImportantFeeling = null;
+
 
     public static void addEmotion(String EXTRA_MESSAGE, Context context, String feeling)
     {
         ImportantFeeling newFeel = new ImportantFeeling(feeling);
-        history.add(newFeel);
-
-        currentImportantFeeling = newFeel;
-
-        notifyListener();
-
+        history.add(newFeel); // add to history
+        currentImportantFeeling = newFeel; // set currentImportantFeeling as newFeel
+        notifyListener(); // notify listener
+        // pass the information to DisplayCommentActivity
         Intent intent = new Intent(context, DisplayCommentActivity.class);
-
         intent.putExtra(EXTRA_MESSAGE, feeling);
         context.startActivity(intent);
     }
 
+    /** test */
     public static String test()
     {
         return "test";
     }
 
+    /** load file */
     public static void loadFromFile(Context context) {
 
         try {
@@ -69,6 +66,7 @@ public class Util
 
     }
 
+    /** save file */
     public static void saveInFile(Context context) {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, 0);
