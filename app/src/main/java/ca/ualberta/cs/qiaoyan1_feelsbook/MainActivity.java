@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView num_of_sadness;
     private TextView num_of_fear;
     /** initialize a HashMap stores counts of the corresponding feeling */
-    HashMap<String, Integer> counts = new HashMap<>();
+    private HashMap<String, Integer> counts = new HashMap<>();
     /** put all six feelings into a list */
-    static String feeling[] = {"LOVE", "JOY", "SURPRISE", "ANGER", "SADNESS", "FEAR"};
+    private static String feeling[] = {"LOVE", "JOY", "SURPRISE", "ANGER", "SADNESS", "FEAR"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

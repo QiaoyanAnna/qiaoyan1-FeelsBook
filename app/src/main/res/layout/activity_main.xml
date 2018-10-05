@@ -38,7 +38,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:onClick="sadness"
         android:text="@string/button_sadness"
         android:textAllCaps="false"
@@ -51,6 +51,7 @@
         android:layout_height="80dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:onClick="surprise"
         android:text="@string/button_surprise"
         android:textAllCaps="false"
@@ -63,6 +64,7 @@
         android:layout_height="80dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
         android:onClick="fear"
         android:text="@string/button_fear"
         android:textAllCaps="false"
@@ -75,7 +77,7 @@
         android:layout_height="80dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:onClick="joy"
         android:text="@string/button_joy"
         android:textAllCaps="false"
@@ -88,7 +90,7 @@
         android:layout_height="40dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loveButton" />
 
@@ -98,7 +100,7 @@
         android:layout_height="40dp"
         android:layout_marginLeft="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/joyButton" />
 
@@ -118,7 +120,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/angerButton" />
 
@@ -128,7 +130,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadnessButton" />
 
