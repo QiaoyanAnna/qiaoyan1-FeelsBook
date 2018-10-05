@@ -1,3 +1,11 @@
+/**
+ * Class Name: DisplayCommentActivity
+ *
+ * Author: Qiaoyan Zhang
+ *
+ * Date: October 5, 2018
+ *
+ */
 package ca.ualberta.cs.qiaoyan1_feelsbook;
 
 import android.content.Intent;
